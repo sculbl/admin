@@ -1,0 +1,100 @@
+span {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    letter-spacing: 1px;
+    font-family: "Adobe 黑体 Std R", 微软雅黑, "Microsoft Yahei", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    &:focus {
+        outline: none;
+    }
+}
+
+.el-table th  {
+    background: #E2F0FF !important
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+* {
+    font-family: 'SourceHanSansCN-Normal';
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.ant-table-thead {
+    tr {
+        th {
+            background: #E2F0FF !important;
+        }
+    }
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+a {
+    text-decoration: none
+}
+
+textarea {
+    -webkit-appearance: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #eeeeee;
+    position: relative;
+    margin: 0;
+}
+
+li {
+    list-style: none
+}
+
+.el-table--scrollable-y .el-table__body-wrapper,
+.scroll-wrap {
+    box-sizing: border-box;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 6px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #ccc;
+        border-radius: 6px;
+    }
+}
+
+.el-input {
+    max-width: 200px;
+}
