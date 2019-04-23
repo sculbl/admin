@@ -18,20 +18,5 @@ import Layout from "@/layout";
 // import Blank from '@/layout/blank'
 
 export default [
-  {
-    meta: { title: "日志管理" },
-    path: "/systemLog",
-    name: "systemLog",
-    component: Layout,
-    redirect: "noredirect",
-    children: [
-      {
-        meta: { title: "任务执行日志" },
-        path: "taskExecutionLog",
-        name: "taskExecutionLog",
-        component: () => import("../views/systemLog/taskExecutionLog")
-      }
-    ]
-  },
   { path: "*", redirect: "/404", hidden: true }
 ];
