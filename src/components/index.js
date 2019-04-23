@@ -6,10 +6,6 @@ import VCategorySelect from './CategorySelect'
 import VUploadExcel from './UploadExcel'
 import VBreadcrumb from './Breadcrumb'
 import VHamburger from './Hamburger'
-import VScreenfull from './Screenfull'
-import VHeaderSearch from './HeaderSearch'
-import VNewsNotice from './NewsNotice'
-import VTreeTable from './TreeTable'
 
 export {
     VTable,
@@ -19,9 +15,5 @@ export {
     VCategorySelect,
     VUploadExcel,
     VBreadcrumb,
-    VHamburger,
-    VScreenfull,
-    VHeaderSearch,
-    VNewsNotice,
-    VTreeTable
+    VHamburger
 }

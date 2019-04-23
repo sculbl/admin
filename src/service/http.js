@@ -3,7 +3,6 @@ import { url } from '../config'
 import { Message, Loading } from 'element-ui'
 import httpRequestList from './clearHttp'
 import MD5 from 'md5'
-// import { getCach, setCach } from './cach'
 
 const http = axios.create({
     baseURL: url.baseUrl,
@@ -55,10 +54,6 @@ http.interceptors.response.use(response => {
 
 export default {
     $GET(url, params, config = {}) {
-        // const { _cach } = config;
-        // if (_cach) {
-        //     getCach(MD5(`${url}${params}`))
-        // }
         const CancelToken = axios.CancelToken;
         return http.get(url, {
             params: params,

@@ -1,4 +1,4 @@
-# vue-admin
+# 后台管理系统骨架
 
 ## 安装node_modules
 ```

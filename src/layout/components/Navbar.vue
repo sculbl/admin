@@ -10,62 +10,33 @@
     <breadcrumb id="breadcrumb-container" class="breadcrumb-container"/>
 
     <div class="right-menu">
-      <template v-if="device!=='mobile'">
-        <search id="header-search" class="right-menu-item"/>
-        <span class="right-menu-item hover-effect">
-          <svg-icon class-name="home-icon" icon-class="home"></svg-icon>
-        </span>
-        <news-notice class="right-menu-item hover-effect"/>
-        <screenfull id="screenfull" class="right-menu-item hover-effect"/>
-      </template>
-
-      <el-popover
-        class="avatar-container right-menu-item hover-effect"
-        placement="bottom-end"
-        width="315"
-        offset="10"
-        v-model="visible"
-      >
-        <div class="card__user__info">
-          <ul>
-            <li>姓名：张小红</li>
-            <li>工号：201111212245745</li>
-            <li>部门：学工部</li>
-            <li>部门：学工部</li>
-            <li>手机号：13652632515</li>
-            <li>邮箱：13652632515@qq.com</li>
-          </ul>
-          <div class="btn-bottom">
-            <el-button type="text" @click="changePass">修改密码</el-button>
-            <el-button type="text" @click="visible = false">个人中心</el-button>
+      <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
+        <span class="el-dropdown-link">
+          <div class="card__user__info"></div>
+          <div class="head__btn" slot="reference">
+            <img src="~@/assets/images/user.png" alt>
+            <span>江三四</span>
           </div>
-        </div>
-        <div class="head__btn" slot="reference">
-          <img src="~@/assets/images/user.png" alt>
-          <span>江三四</span>
-        </div>
-      </el-popover>
+        </span>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item>首页</el-dropdown-item>
+          <el-dropdown-item>完善个人信息</el-dropdown-item>
+          <el-dropdown-item>完善公司信息</el-dropdown-item>
+          <el-dropdown-item>退出登陆</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import {
-  VBreadcrumb as Breadcrumb,
-  VHamburger as Hamburger,
-  VScreenfull as Screenfull,
-  VHeaderSearch as Search,
-  VNewsNotice as NewsNotice
-} from "component";
+import { VBreadcrumb as Breadcrumb, VHamburger as Hamburger } from "component";
 
 export default {
   components: {
     Breadcrumb,
-    Hamburger,
-    Screenfull,
-    Search,
-    NewsNotice
+    Hamburger
   },
   data() {
     return {
